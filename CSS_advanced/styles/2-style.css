@@ -1,14 +1,64 @@
-/* body and links foreground color: #161616
-   specified class names foreground color: #D73953
-*/
-html {
-    scroll-behavior: smooth;
+/* ---------------------- */
+/*        HEADER          */
+/* ---------------------- */
+
+header {
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  font-family: 'Montserrat', sans-serif;
 }
 
-body, a {
-    color: #161616;
+header .logo {
+  height: 40px;
 }
 
-.card-category, .section-tagline {
-    color: #D73953;
+header nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ---------------------- */
+/*        HERO / BANNER   */
+/* ---------------------- */
+
+.hero {
+  height: 600px;
+  background-image: url('../images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero p {
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 600px;
+  font-family: 'Montserrat', sans-serif;
 }
