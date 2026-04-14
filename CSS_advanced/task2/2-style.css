@@ -1,0 +1,151 @@
+/* ---------------------- */
+/*        GLOBAL          */
+/* ---------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+}
+
+/* ---------------------- */
+/*        HEADER          */
+/* ---------------------- */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 10;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header .logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ---------------------- */
+/*        HERO            */
+/* ---------------------- */
+
+.hero {
+  height: 100vh;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+    url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.hero .keywords {
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.hero button {
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+/* ---------------------- */
+/*   LEARN FROM THE PROS  */
+/* ---------------------- */
+
+.pros {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.pros h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.pros h2 span {
+  color: #C271FF;
+  font-weight: 700;
+}
+
+.pros .profiles {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.pros .profile {
+  text-align: center;
+}
+
+.pros .profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.pros .profile h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0 5px;
+}
+
+.pros .profile p {
+  font-style: italic;
+  font-size: 14px;
+  margin: 0;
+}
