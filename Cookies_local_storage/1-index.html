@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 1 - Cookies with expiration</title>
+  </head>
+
+  <body>
+    <h1>Login to the website</h1>
+
+    <input type="text" id="firstname" placeholder="Firstname" />
+    <br /><br />
+
+    <input type="text" id="email" placeholder="Email" />
+    <br /><br />
+
+    <button onclick="setCookies()">Log me in</button>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <script>
+      // Function to set cookies with expiration + path
+      function setCookies() {
+        const firstname = document.getElementById("firstname").value;
+        const email = document.getElementById("email").value;
+
+        // Expiration dans 10 jours
+        const expiration = new Date();
+        expiration.setTime(expiration.getTime() + 10 * 24 * 60 * 60 * 1000);
+        const expires = "expires=" + expiration.toUTCString();
+
+        // Cookies avec expiration + path
+        document.cookie = `firstname=${firstname}; ${expires}; path=/`;
+        document.cookie = `email=${email}; ${expires}; path=/`;
+      }
+
+      // Function to show cookies
+      function showCookies() {
+        const p = document.createElement("p");
+        p.innerHTML = `Cookies: ${document.cookie}`;
+        document.body.appendChild(p);
+      }
+    </script>
+  </body>
+</html>
+

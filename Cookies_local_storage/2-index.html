@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 2 - Read Cookies</title>
+  </head>
+
+  <body>
+    <h1>Login to the website</h1>
+
+    <input type="text" id="firstname" placeholder="Firstname" />
+    <br /><br />
+
+    <input type="text" id="email" placeholder="Email" />
+    <br /><br />
+
+    <button onclick="setCookies()">Log me in</button>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <script>
+      // Create cookies with expiration + path
+      function setCookies() {
+        const firstname = document.getElementById("firstname").value;
+        const email = document.getElementById("email").value;
+
+        const expiration = new Date();
+        expiration.setTime(expiration.getTime() + 10 * 24 * 60 * 60 * 1000);
+        const expires = "expires=" + expiration.toUTCString();
+
+        document.cookie = `firstname=${firstname}; ${expires}; path=/`;
+        document.cookie = `email=${email}; ${expires}; path=/`;
+      }
+
+      // Function to read a cookie by name
+      function getCookie(name) {
+        const cookies = document.cookie.split(";");
+
+        for (let cookie of cookies) {
+          cookie = cookie.trim();
+
+          if (cookie.startsWith(name + "=")) {
+            return cookie.substring(name.length + 1);
+          }
+        }
+        return "";
+      }
+
+      // Show cookies in the required format
+      function showCookies() {
+        const firstname = getCookie("firstname");
+        const email = getCookie("email");
+
+        const p = document.createElement("p");
+        p.innerHTML = `Email: ${email} - Firstname: ${firstname}`;
+        document.body.appendChild(p);
+      }
+    </script>
+  </body>
+</html>
+
